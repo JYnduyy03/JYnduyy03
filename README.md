@@ -66,28 +66,6 @@ Mình là một người đang học hỏi từng ngày — thích tự động 
 
 <br>
 
----
-
-<br>
-
-<details align="center">
-  <summary><samp><b>✦ more info ✦</b></samp></summary>
-
-<br>
-
-
-
-<div align="center">
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/JavaScript.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/NodeJS-Dark.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/HTML.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CSS.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Python-Dark.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Java-Dark.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Linux-Dark.svg"/>
-  <img width="45" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/VSCode-Dark.svg"/>
-</div>
 
 <br>
 
