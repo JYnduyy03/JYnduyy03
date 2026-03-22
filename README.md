@@ -30,7 +30,7 @@
 
 <div align="center">
 
-### 🌐 [→ Xem full profile với animation tại đây](https://JYnduyy03.github.io/JYnduyy03)
+### [FULL PROFILE](https://JYnduyy03.github.io/JYnduyy03)
 
 
 ## DEv\_nduyy0.0
@@ -44,7 +44,6 @@ Mình là một người đang học hỏi từng ngày — thích tự động 
 `JavaScript` &nbsp; `Node.js` &nbsp; `Termux` &nbsp; `AI Tools` &nbsp; `Linux` &nbsp; `Open Source` &nbsp; `Java` &nbsp; `HTML` &nbsp; `Python`
 
 </div>
-##
 
 <div align="center">
 
@@ -56,12 +55,8 @@ Mình là một người đang học hỏi từng ngày — thích tự động 
 <div align="center">
   <samp>
     ♡ <a href="https://github.com/JYnduyy03/TERMUX-AIDEv">TERMUX-AIDEv</a> ⊹
-    <a href="https://github.com/JYnduyy03">repositories</a> ♡
   </samp>
 </div>
-
-##
-
 </details>
 
 <br>
