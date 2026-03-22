@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>DEv_nduyy0.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#060810;color:#eef2f7;font-family:'Be Vietnam Pro',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+:root{
+  --a:#00e5c3;--a2:#5b8def;--a3:#a78bfa;
+  --txt:#f4f8ff;--sub:#8aa0b8;--dim:#3d5068;--dim2:#1e2d3d;
+  --s2:#0d1520;--border:rgba(255,255,255,.06);--red:#e25555;
+}
+
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+#meteors{position:fixed;inset:0;pointer-events:none;z-index:1}
+
+.orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(100px)}
+.orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,195,.06) 0%,transparent 65%);top:-130px;right:-80px}
+.orb2{width:420px;height:420px;background:radial-gradient(circle,rgba(91,141,239,.05) 0%,transparent 65%);bottom:8%;left:-100px}
+
+.wrap{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:0 28px 80px}
+
+/* TOPBAR */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0 0;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:.1em;animation:fadeDown .7s ease both}
+.status{display:flex;align-items:center;gap:7px}
+.sdot{width:6px;height:6px;border-radius:50%;background:var(--a);animation:sonar 2.5s ease-in-out infinite}
+@keyframes sonar{0%{box-shadow:0 0 0 0 rgba(0,229,195,.4)}70%{box-shadow:0 0 0 8px rgba(0,229,195,0)}100%{box-shadow:0 0 0 0 rgba(0,229,195,0)}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 0 52px}
+
+.intro-mono{font-family:'JetBrains Mono',monospace;font-size:11px;color:#6a8aaa;letter-spacing:.14em;line-height:2.2;margin-bottom:22px;animation:fadeUp .7s .1s ease both;text-shadow:0 0 20px rgba(0,229,195,.15)}
+
+.cat-wrap{margin-bottom:20px;animation:fadeUp .7s .2s ease both}
+.cat-gif{width:165px;animation:catFloat 4s ease-in-out infinite;filter:drop-shadow(0 4px 22px rgba(0,229,195,.2))}
+@keyframes catFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+.badges{display:flex;gap:8px;justify-content:center;margin-bottom:16px;animation:fadeUp .7s .3s ease both}
+.bdg{font-family:'JetBrains Mono',monospace;font-size:10px;background:rgba(255,255,255,.035);color:var(--dim);border:1px solid var(--border);padding:4px 13px;border-radius:6px;letter-spacing:.05em}
+
+.typing-wrap{min-height:22px;margin-bottom:30px;animation:fadeUp .7s .38s ease both}
+.typing-text{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:var(--a);border-right:2px solid var(--a);white-space:nowrap;overflow:hidden;text-shadow:0 0 16px rgba(0,229,195,.8),0 0 32px rgba(0,229,195,.4);animation:blink .7s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+
+/* ── NAME — nổi bật cực mạnh ── */
+@keyframes nameGlow{
+  0%,100%{text-shadow:0 0 20px rgba(255,255,255,.6),0 0 50px rgba(0,229,195,.4),0 0 90px rgba(0,229,195,.2),0 4px 8px rgba(0,0,0,.7)}
+  50%{text-shadow:0 0 30px rgba(255,255,255,.9),0 0 70px rgba(0,229,195,.6),0 0 120px rgba(0,229,195,.3),0 4px 8px rgba(0,0,0,.7)}
+}
+@keyframes acGlow{
+  0%,100%{text-shadow:0 0 15px rgba(0,229,195,.8),0 0 35px rgba(0,229,195,.5),0 0 65px rgba(0,229,195,.25)}
+  50%{text-shadow:0 0 25px rgba(0,229,195,1),0 0 55px rgba(0,229,195,.7),0 0 100px rgba(0,229,195,.4)}
+}
+.hero-name{
+  font-family:'Be Vietnam Pro',sans-serif;
+  font-size:clamp(28px,5vw,48px);
+  font-weight:700;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  margin-bottom:10px;
+  animation:fadeUp .7s .08s ease both, nameGlow 3s ease-in-out 1s infinite;
+  color:#ffffff;
+  cursor:default;
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+.hero-name:hover{transform:scale(1.06) translateY(-4px)}
+.hero-name .ac{
+  color:var(--a);
+  animation:acGlow 3s ease-in-out 1s infinite;
+  display:inline-block;
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+.hero-name:hover .ac{transform:scale(1.05)}
+
+.hero-handle{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--dim);letter-spacing:.1em;margin-bottom:24px;animation:fadeUp .7s .15s ease both}
+
+/* BIO — Be Vietnam Pro, readable */
+.bio{
+  font-family:'Be Vietnam Pro',sans-serif;
+  font-size:15px;font-weight:400;line-height:1.85;
+  color:#9ab4cc;max-width:520px;margin:0 auto 24px;
+  animation:fadeUp .7s .22s ease both;
+  text-shadow:0 1px 8px rgba(0,0,0,.8);
+}
+.bio strong{color:#e8f4ff;font-weight:700;text-shadow:0 0 14px rgba(180,220,255,.3)}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:28px;animation:fadeUp .7s .3s ease both}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:5px 13px;border-radius:100px;border:1px solid var(--border);color:var(--dim);cursor:default;transition:all .2s;font-weight:500}
+.tag:hover,.tag.active{border-color:var(--a);color:var(--a);background:rgba(0,229,195,.07);transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,229,195,.12)}
+.tag.learn{border-color:rgba(91,141,239,.3);color:var(--a2)}
+.tag.learn:hover{border-color:var(--a2);background:rgba(91,141,239,.08);box-shadow:0 4px 14px rgba(91,141,239,.12)}
+
+.social-links{display:flex;gap:10px;justify-content:center;animation:fadeUp .7s .37s ease both}
+.slink{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:500;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:8px 20px;color:var(--dim);cursor:default;transition:all .2s;letter-spacing:.04em}
+.slink:hover{border-color:var(--a);color:var(--a);background:rgba(0,229,195,.05);box-shadow:0 4px 16px rgba(0,229,195,.1)}
+
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:38px;animation:fadeIn 1s 1.5s ease both}
+.scroll-line{width:1px;height:36px;background:linear-gradient(180deg,transparent,var(--a));animation:scrollDrop 1.8s ease-in-out infinite}
+@keyframes scrollDrop{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1}100%{opacity:0;transform:scaleY(1);transform-origin:top}}
+.scroll-txt{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--dim2);letter-spacing:.18em}
+
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,229,195,.2),transparent);margin:0 0 56px}
+
+.sections{display:flex;flex-direction:column;gap:36px;padding-bottom:36px}
+.sb{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.sb.visible{opacity:1;transform:translateY(0)}
+
+/* SEC LABEL */
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--dim2);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-weight:500}
+.sec-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat-card{background:var(--s2);border:1px solid var(--border);border-radius:14px;padding:22px 18px;cursor:default;transition:border-color .22s,transform .22s,box-shadow .22s;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,229,195,.04),transparent);opacity:0;transition:opacity .22s}
+.stat-card:hover{border-color:rgba(0,229,195,.26);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.stat-card:hover::before{opacity:1}
+.stat-num{
+  font-family:'Be Vietnam Pro',sans-serif;
+  font-size:40px;font-weight:700;color:var(--a);line-height:1;
+  text-shadow:0 0 18px rgba(0,229,195,.3);
+}
+.stat-card:nth-child(3) .stat-num{color:var(--txt);font-size:26px;padding-top:5px;text-shadow:0 2px 4px rgba(0,0,0,.4)}
+.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);margin-top:8px;letter-spacing:.05em}
+
+/* LANG */
+.lang-card{background:var(--s2);border:1px solid var(--border);border-radius:14px;padding:22px 26px}
+.lang-row{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.lang-row:last-child{margin-bottom:0}
+.lang-name{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:600;width:100px;flex-shrink:0}
+.lang-name.js{color:var(--a)}.lang-name.sh{color:var(--a2)}.lang-name.md{color:var(--a3)}
+.lang-track{flex:1;height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.lang-fill{height:100%;border-radius:3px;width:0;position:relative;overflow:hidden}
+.lang-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:translateX(-100%);animation:sheen 2.8s ease 2.5s infinite}
+@keyframes sheen{0%{transform:translateX(-100%)}55%,100%{transform:translateX(220%)}}
+.lang-fill.js{background:linear-gradient(90deg,#00c4aa,var(--a));box-shadow:0 0 10px rgba(0,229,195,.25)}
+.lang-fill.sh{background:linear-gradient(90deg,#3a6ddf,var(--a2));box-shadow:0 0 10px rgba(91,141,239,.25)}
+.lang-fill.md{background:linear-gradient(90deg,#8b6fef,var(--a3));box-shadow:0 0 10px rgba(167,139,250,.25)}
+.lang-pct{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--dim);width:34px;text-align:right}
+
+/* REPO */
+.repo-card{background:var(--s2);border:1px solid var(--border);border-radius:14px;padding:22px 26px;cursor:default;transition:border-color .22s,transform .22s,box-shadow .22s;position:relative;overflow:hidden}
+.repo-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(63,185,80,.55),transparent);opacity:0;transition:opacity .22s}
+.repo-card:hover{border-color:rgba(63,185,80,.28);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.repo-card:hover::after{opacity:1}
+.repo-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.repo-name{font-family:'Be Vietnam Pro',sans-serif;font-size:16px;font-weight:700;color:#70b8ff;text-shadow:0 0 20px rgba(88,166,255,.25)}
+.repo-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:3px 10px;border-radius:100px;border:1px solid rgba(0,229,195,.26);color:var(--a);background:rgba(0,229,195,.05)}
+.repo-desc{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:400;color:var(--sub);line-height:1.75;margin-bottom:12px}
+.repo-meta{display:flex;gap:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim2);flex-wrap:wrap}
+.ldot{width:9px;height:9px;background:#f1e05a;border-radius:50%;display:inline-block;margin-right:5px;box-shadow:0 0 5px rgba(241,224,90,.4)}
+
+/* CONTRIB */
+.contrib-grid{display:grid;grid-template-columns:repeat(52,1fr);gap:3px}
+.c-cell{aspect-ratio:1;border-radius:2px;background:#0c1420;transition:background .1s,transform .1s}
+.c-cell:hover{background:var(--a) !important;transform:scale(1.35)}
+.c1{background:#0a2820}.c2{background:#0c4535}.c3{background:#0d9e7a}.c4{background:#00e5c3}
+
+/* FOOTER */
+.footer-simple{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim2);letter-spacing:.06em;text-align:center;padding:32px 0 16px}
+.footer-simple span{color:var(--red)}
+.links{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);text-align:center;margin-bottom:12px}
+.links a{color:var(--a2);text-decoration:none;transition:color .18s}
+.links a:hover{color:var(--a)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<canvas id="meteors"></canvas>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="wrap">
+  <div class="topbar">
+    <span>github.com/JYnduyy03</span>
+    <span class="status"><span class="sdot"></span>available for collab</span>
+  </div>
+
+  <section class="hero">
+    <div class="intro-mono">デベロッパー &nbsp;·&nbsp; Xin chào, mình là nduyy !</div>
+    <div class="cat-wrap"><img class="cat-gif" src="https://imgur.com/zeuHIk9.gif" alt="cat"/></div>
+    <div class="badges"><span class="bdg">dev ♡</span><span class="bdg">🐱 cat mode</span></div>
+    <div class="typing-wrap"><span class="typing-text" id="typer"></span></div>
+    <div class="hero-name">DEv_<span class="ac">nduyy</span>0.0</div>
+    <div class="hero-handle">@JYnduyy03</div>
+    <div class="bio">
+      Mình là <strong>DEv_nduyy</strong> — một người đang học hỏi từng ngày, thích tự động hoá mọi thứ và biến ý tưởng thành code. Còn nhiều điều cần học, nhưng mình không ngừng tiến về phía trước.
+    </div>
+    <div class="tags">
+      <span class="tag active">JavaScript</span><span class="tag">Node.js</span>
+      <span class="tag">Termux</span><span class="tag">AI Tools</span>
+      <span class="tag">Linux</span><span class="tag">Open Source</span>
+      <span class="tag learn">Java</span><span class="tag learn">HTML</span>
+      <span class="tag learn">Python</span>
+    </div>
+    <div class="social-links">
+      <span class="slink">⬡ GitHub</span>
+      <span class="slink">◈ Zalo</span>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span class="scroll-txt">SCROLL</span>
+    </div>
+  </section>
+
+  <div class="footer-simple">DEVcode © 2026 &nbsp;·&nbsp; made with <span>♥</span> in Vietnam</div>
+</div>
+
+<script>
+/* STAR + METEOR */
+const sc=document.getElementById('stars'),sctx=sc.getContext('2d');
+const mc=document.getElementById('meteors'),mctx=mc.getContext('2d');
+let W,H;
+const resize=()=>{W=sc.width=mc.width=innerWidth;H=sc.height=mc.height=innerHeight};
+resize();addEventListener('resize',resize);
+
+// Stars
+const stars=[];
+for(let i=0;i<220;i++)stars.push({x:Math.random(),y:Math.random(),r:Math.random()*.8+.1,o:Math.random()*.55+.15,tw:Math.random()*4+1.5,ph:Math.random()*Math.PI*2});
+
+function drawStars(t){
+  sctx.clearRect(0,0,W,H);
+  stars.forEach(s=>{
+    const flicker=s.o*(0.55+0.45*Math.sin(t/s.tw+s.ph));
+    sctx.beginPath();sctx.arc(s.x*W,s.y*H,s.r,0,6.28);
+    sctx.fillStyle=`rgba(255,255,255,${flicker})`;sctx.fill();
+  });
+}
+
+// Meteors
+class Meteor{
+  constructor(){this.reset(true)}
+  reset(init=false){
+    this.x=Math.random()*W*1.4;
+    this.y=init?Math.random()*H*0.6:-50;
+    this.len=Math.random()*160+60;
+    this.spd=Math.random()*7+4;
+    this.angle=Math.PI/5.5;
+    this.vx=Math.cos(this.angle)*this.spd;
+    this.vy=Math.sin(this.angle)*this.spd;
+    this.alpha=Math.random()*.65+.3;
+    this.w=Math.random()*1.4+.4;
+    this.color=Math.random()>.6?'0,229,195':Math.random()>.5?'220,235,255':'140,185,255';
+  }
+  update(){this.x+=this.vx;this.y+=this.vy;if(this.y>H+60||this.x>W+60)this.reset()}
+  draw(){
+    const tx=this.x-Math.cos(this.angle)*this.len;
+    const ty=this.y-Math.sin(this.angle)*this.len;
+    const g=mctx.createLinearGradient(tx,ty,this.x,this.y);
+    g.addColorStop(0,`rgba(${this.color},0)`);
+    g.addColorStop(1,`rgba(${this.color},${this.alpha})`);
+    mctx.beginPath();mctx.moveTo(tx,ty);mctx.lineTo(this.x,this.y);
+    mctx.strokeStyle=g;mctx.lineWidth=this.w;mctx.stroke();
+    mctx.beginPath();mctx.arc(this.x,this.y,this.w+.6,0,6.28);
+    mctx.fillStyle=`rgba(${this.color},${this.alpha})`;mctx.fill();
+  }
+}
+const meteors=[];
+for(let i=0;i<12;i++){const m=new Meteor();meteors.push(m)}
+
+(function loop(t){
+  drawStars(t*.001);
+  mctx.clearRect(0,0,W,H);
+  meteors.forEach(m=>{m.update();m.draw()});
+  requestAnimationFrame(loop);
+})();
+
+/* TYPING */
+const phrases=['DEv_nduyy0.0 | JYnduyy03','Building TERMUX-AIDEv','JavaScript / Node.js / AI','Learning Java · HTML · Python','Coding from Vietnam 🇻🇳','Be welcome ! ♡'];
+let pi=0,ci=0,del=false,hold=false;
+const tel=document.getElementById('typer');
+const tick=()=>{const p=phrases[pi];if(!del&&!hold){tel.textContent=p.slice(0,++ci);if(ci===p.length){hold=true;setTimeout(()=>{hold=false;del=true;tick()},2000);return}}else if(del&&!hold){tel.textContent=p.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length}}setTimeout(tick,del?32:60)};
+tick();
+
+const countUp=(el,target,dur)=>{const t0=performance.now();const run=now=>{const t=Math.min((now-t0)/dur,1);const ease=1-Math.pow(2,-10*t);el.textContent=Math.round(target*ease);if(t<1)requestAnimationFrame(run)};requestAnimationFrame(run)};
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add('visible');
+    if(e.target.id==='sb1'){setTimeout(()=>countUp(document.getElementById('n1'),8,900),80);setTimeout(()=>countUp(document.getElementById('n2'),1,500),240)}
+    if(e.target.id==='sb2'){const ez='1.2s cubic-bezier(.22,1,.36,1)';[['b1','82%',80],['b2','12%',240],['b3','6%',400]].forEach(([id,w,d])=>setTimeout(()=>{document.getElementById(id).style.cssText+=`;transition:width ${ez};width:${w}`},d))}
+    io.unobserve(e.target);
+  });
+},{threshold:.12});
+document.querySelectorAll('.sb').forEach(el=>io.observe(el));
+
+const cg=document.getElementById('cgrid');
+for(let i=0;i<364;i++){const d=document.createElement('div');d.className='c-cell';const w=Math.floor(i/7),day=i%7;if(w>=51)d.classList.add(['c2','c3','c3','c4','c3','c4','c3'][day]);else if(w>=50&&day%2===0)d.classList.add('c2');else if(Math.random()<.04)d.classList.add('c1');cg.appendChild(d)}
+
+let raf;
+document.addEventListener('mousemove',e=>{if(raf)return;raf=requestAnimationFrame(()=>{const mx=e.clientX/W-.5,my=e.clientY/H-.5;document.querySelector('.orb1').style.transform=`translate(${mx*14}px,${my*14}px)`;document.querySelector('.orb2').style.transform=`translate(${-mx*10}px,${-my*10}px)`;raf=null})});
+</script>
+</body>
+</html>
