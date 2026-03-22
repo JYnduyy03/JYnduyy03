@@ -28,19 +28,10 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&color=00e5c3&width=620&size=17&center=true&pause=1000&lines=DEv_nduyy0.0+%7C+JYnduyy03;Building+TERMUX-AIDEv;JavaScript+%2F+Node.js+%2F+AI+Tools;Learning+Java+%7C+HTML+%7C+Python;Coding+from+Vietnam+%F0%9F%87%BB%F0%9F%87%B3;Be+welcome+!+%E2%99%A1" alt="Typing SVG"/>
 </div>
 
-<br>
-
----
-
-<br>
-
 <div align="center">
 
-```
-  github.com/JYnduyy03          ● available for collab
-```
+### 🌐 [→ Xem full profile với animation tại đây](https://JYnduyy03.github.io/JYnduyy03)
 
-</div>
 
 ## DEv\_nduyy0.0
 
@@ -52,33 +43,7 @@ Mình là một người đang học hỏi từng ngày — thích tự động 
 
 `JavaScript` &nbsp; `Node.js` &nbsp; `Termux` &nbsp; `AI Tools` &nbsp; `Linux` &nbsp; `Open Source` &nbsp; `Java` &nbsp; `HTML` &nbsp; `Python`
 
-<br>
-
----
-
-<br>
-
-<div align="center">
-
-### 🌐 [→ Xem full profile với animation tại đây](https://JYnduyy03.github.io/JYnduyy03)
-
 </div>
-
-<br>
-
-
-<br>
-
-## contributions — 2026
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=JYnduyy03&theme=react-dark&bg_color=060810&color=00e5c3&line=00e5c3&point=ffffff&area=true&hide_border=true)](https://github.com/JYnduyy03)
-
-</div>
-
-<br>
-
 ##
 
 <div align="center">
