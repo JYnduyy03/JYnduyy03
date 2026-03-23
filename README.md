@@ -25,10 +25,6 @@
 <br>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&color=00e5c3&width=620&size=17&center=true&pause=1000&lines=DEv_nduyy0.0+%7C+JYnduyy03;Building+TERMUX-AIDEv;JavaScript+%2F+Node.js+%2F+AI+Tools;Learning+Java+%7C+HTML+%7C+Python;Coding+from+Vietnam+%F0%9F%87%BB%F0%9F%87%B3;Be+welcome+!+%E2%99%A1" alt="Typing SVG"/>
-</div>
-
-<div align="center">
 
 ### [FULL PROFILE](https://JYnduyy03.github.io/JYnduyy03)
 
