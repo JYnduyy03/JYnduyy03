@@ -12,18 +12,6 @@
   <img src="https://imgur.com/zeuHIk9.gif" width="180"/>
 </div>
 
-<br>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/dev_%E2%99%A1-0a0a0a?style=flat&labelColor=0a0a0a"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/%F0%9F%90%B1_cat_mode-0a0a0a?style=flat&labelColor=0a0a0a"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/%E2%97%8F_available_for_collab-0a0a0a?style=flat&color=00e5c3&labelColor=0a0a0a"/>
-</div>
-
-<br>
-
 <div align="center">
 
 ### [FULL PROFILE](https://JYnduyy03.github.io/JYnduyy03)
