@@ -46,7 +46,7 @@ Mình là một người đang học hỏi từng ngày — thích tự động 
 <br>
 
 <div align="center">
-  <sub>DEVcode © 2026 &nbsp;·&nbsp; made with ♥ in Vietnam</sub>
+  <sub>DEvcode © 2026 &nbsp;·&nbsp; made with ♥ in Vietnam</sub>
 </div>
 
 <br>
