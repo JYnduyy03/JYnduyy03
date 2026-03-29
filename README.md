@@ -17,7 +17,7 @@
 ### [FULL PROFILE](https://JYnduyy03.github.io/JYnduyy03)
 
 
-## DEv\_nduyy0.0
+## nduyy0.0
 
 `@JYnduyy03` — Developer từ Việt Nam 🇻🇳
 
